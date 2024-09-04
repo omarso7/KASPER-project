@@ -1,7 +1,8 @@
 /* Start varibles  */
 :root {
-    --main-color:#0F748F;
+    --main-color:#19C8FA;
     --sec-color:#1F2021;
+    --back-color:#0F748F;
 }
 /* End varibles  */
 /* start globals */
@@ -17,6 +18,7 @@
 }
 html {
     scroll-behavior: smooth;
+    /* overflow-x: hidden; */
 }
 .sec-color {
     background-color: var(--sec-color);
@@ -240,7 +242,7 @@ header .container .main-bars{
     position: relative;
 }
 .interface .text {
-    background-color: var(--main-color);
+    background-color: var(--back-color);
     width: 70%;
     height: 360px;
     color: white;
@@ -383,7 +385,7 @@ header .container .main-bars{
     position: absolute;
     right: 0;
     top: 160px;
-    background-color: var(--main-color);
+    background-color: var(--back-color);
     width: 40%;
     height: 300px;
     z-index: 2;
@@ -394,7 +396,7 @@ header .container .main-bars{
 .phone .container .specific::before {
     content: '';
     width: 100%;
-    background-color: var(--main-color);
+    background-color: var(--back-color);
     height: 300px;
     z-index: 1;
     position: absolute;
@@ -434,6 +436,11 @@ header .container .main-bars{
 .portfolio .buttons p {
     padding: 8px 20px;
     transition: 0.3s;
+}
+@media (max-width:450px) {
+    .portfolio .buttons p{
+    padding: 8px 5px;
+    }
 }
 .portfolio .buttons p:hover{
     background-color: var(--main-color);
@@ -552,7 +559,7 @@ header .container .main-bars{
 .video > div {
     width: 100%;
     height: 260px;
-    background-color: var(--main-color);
+    background-color: var(--back-color);
     color: white;
     display: flex;
     flex-wrap: wrap;
@@ -576,4 +583,70 @@ header .container .main-bars{
 }
 .video div .button:hover {
     background-color: var(--sec-color);
+}
+.about {
+    position: relative;
+}
+.about .container .screens {
+    width: 100%;
+    height: 50vh;
+    margin: auto;
+    position: relative;
+    z-index: -1;
+}
+.about .container .screens .screen {
+    width: 550px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.about .container .screens .phone {
+    width: 190px;
+    height: auto;
+    z-index: 1;
+    position: absolute;
+    right: 10%;
+    top: 80px;
+}
+.about .container .screens .laptop {
+    position: absolute;
+    z-index: 1;
+    top: 80px;
+    left: -35px;
+}
+
+.about .acheiv {
+    background-color: var(--sec-color);
+    overflow: hidden;
+    z-index: 3;
+    margin-top: -200px;
+    display: flex;
+    align-items: center;
+}
+@media (max-width:992px){
+    .about .container .screens {
+        display: none;
+    }
+    .about .acheiv {
+        margin-top: 0;
+    }
+}
+
+.about .acheiv .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    row-gap: 10px;
+    padding: 20px 5px;
+    z-index: 3;
+    padding: 80px 0;
+    
+}
+.about .acheiv .container div {
+    background-color: var(--back-color);
+    padding: 20px 0;
+}
+@media (max-width:1200px){
+    .about .acheiv .container {
+        grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
+    }
 }
