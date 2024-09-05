@@ -955,7 +955,7 @@ header .container .main-bars{
     left: 50%;
     transform: translateX(-50% );
 }
-.pricing .container .button {
+.pricing .container .plans .button {
     border: 1px solid var(--main-color);
     width: fit-content;
     margin: auto;
@@ -964,7 +964,186 @@ header .container .main-bars{
     transition: 0.3s;
     cursor: pointer;
 }
-.pricing .container .button:hover {
+.pricing .container .plans .button:hover {
     background-color: var(--main-color);
     color: white;
+}
+
+.pricing .container .req {
+    text-align: center;
+    margin-bottom: 100px;
+}
+.pricing .container .req p {
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+.pricing .container .req a {
+    color: black;
+    display: inline-block;
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.pricing .container .req a:hover {
+    color: white;
+    background-color: var(--main-color);
+}
+.pricing .subs .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    padding: 100px 0;
+    color: white;
+}
+.pricing .subs .container form {
+    width: calc(60% - 10px);
+    border: 1px solid white;
+    height: 45px;
+    position: relative;
+}
+.pricing .subs .container p {
+    width: calc(40% - 10px);
+    font-size: 15px;
+    line-height: 1.4;
+    font-weight: 300;
+}
+.pricing .subs .container form i {
+    position: absolute;
+    left: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    opacity: 0.5;
+}
+.pricing .subs .container form input:first-of-type {
+    height: 100%;
+    width: calc(100% - 135px);
+    outline: none;
+    border: none;
+    background-color: var(--sec-color);
+    color: white;
+    padding-left: 10px;
+}
+.pricing .subs .container form input:first-of-type:focus + i{
+    display: none;
+}
+.pricing .subs .container form input:first-of-type::placeholder {
+    padding-left: 30px;
+}
+.pricing .subs .container form input:last-child {
+    width: 130px;
+    height: 100%;
+    background-color: var(--main-color);
+    color: white;
+    outline: none;
+    border: none;
+}
+
+
+.contact .container .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.contact .container .content form {
+    width: 60%;
+}
+.contact .container .content form input {
+    width: 100%;
+    height: 60px;
+    margin-bottom: 20px;
+    outline: none;
+    padding-left: 20px;
+}
+@media (max-width:992px) {
+    .pricing .subs .container form {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .pricing .subs .container p {
+        width: 100%;
+    }
+    .contact .container .content form {
+        width: 100%;
+    }
+}
+.contact .container .content form input:last-of-type {
+    box-sizing: content-box;
+    height: 50px;
+    padding-bottom: 150px;
+    width: calc(100% - 20px);
+}
+
+.contact .container .content .info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    opacity: 0.8;
+}
+.contact .container .content .info div {
+    width: 100%;
+}
+.contact .container .content .info div h4 {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.contact .container .content .info div p {
+    margin-bottom: 10px;
+}
+.contact .container .button {
+    margin: 40px auto 100px;
+    width: fit-content;
+    padding: 15px 25px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.contact .container .button:hover {
+    background-color: var(--main-color);
+}
+footer {
+    height: 350px;
+}
+footer .img {
+    width: fit-content;
+    margin: auto;
+    padding-top: 80px;
+}
+footer .img img {
+    width: 150px;
+}
+footer p {
+    margin: auto;
+    width: fit-content;
+    color: white;
+    opacity: 0.8;
+    margin-top: 40px;
+    position: relative;
+}
+footer p::after {
+    content: '';
+    width: 200%;
+    height: 2px;
+    background-color: white;
+    /* opacity: 0.8; */
+    position: absolute;
+    bottom: -20px;
+    left: -50%;
+}
+footer .icons {
+    margin: 40px auto;
+    width: 115px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color: white;
+    opacity: 0.8;
 }
