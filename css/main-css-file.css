@@ -616,7 +616,6 @@ header .container .main-bars{
 }
 
 .about .acheiv {
-    background-color: var(--sec-color);
     overflow: hidden;
     z-index: 3;
     margin-top: -200px;
@@ -638,15 +637,334 @@ header .container .main-bars{
     row-gap: 10px;
     padding: 20px 5px;
     z-index: 3;
-    padding: 80px 0;
+    padding: 100px 0;
     
 }
 .about .acheiv .container div {
     background-color: var(--back-color);
-    padding: 20px 0;
+    padding: 40px 0;
+    color: white;
 }
 @media (max-width:1200px){
     .about .acheiv .container {
         grid-template-columns: repeat(auto-fill, minmax(370px, 1fr));
     }
+}
+.about .acheiv .container div i {   
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 20px;
+    color: var(--sec-color);
+}
+.about .acheiv .container div h3 {
+    text-align: center;
+    font-size: 45px;
+    margin-bottom: 20px;
+}
+.about .acheiv .container div p{
+    text-align: center;
+}
+.about .statistics .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 120px;
+}
+.about .statistics .container .comments{
+    width: 45%;
+}
+.about .statistics h3 {
+    margin-top: 70px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 25px;
+    font-weight: 400;
+}
+.about .statistics p {
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #A8A8A8;
+}
+.about .statistics .container .comments > div {
+    width: 100%;
+    /* padding-bottom: 30px; */
+    height: 110px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.about .statistics .container .comments > div::before {
+    content: 'John Doe,CEO';
+    position: absolute;
+    font-size: 13px;
+    color: #A8A8A8;
+    font-style: italic;
+    bottom: 10px;
+    right: 0;
+}
+.about .statistics .container .comments > div::after {
+    content: '';
+    width: 75%;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #A8A8A8;
+}
+.about .statistics .container .comments div .circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    align-self: self-end;
+    background-color: var(--sec-color);
+}
+.about .statistics .container .comments div p {
+    width: 75%;
+    line-height: 1.5;
+    margin-bottom: 5px;
+}
+.about .statistics .container .skills {
+    width: 45%;
+}
+@media (max-width:992px){
+    .about .statistics .container .comments {
+        width: 100%;
+    }
+    .about .statistics .container .skills {
+        width: 100%;
+    }
+}
+.about .statistics .container .skills div{
+    margin-bottom: 20px;
+}
+.about .statistics .container .skills div h4{
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+.about .statistics .container .skills div > div {
+    width: 100%;
+    height: 25px;
+    background-color: RGBA(219, 219, 219, 1);
+}
+.about .statistics .container .skills div:first-of-type > div > div {
+    width: 95%;
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+    transition: 0.3s;
+}
+.about .statistics .container .skills div:first-of-type > div > div:hover::after {
+    content: '95%';
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    padding-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    background-color: RGBA(31, 32, 33, 1);
+    color: white;
+    position: absolute;
+    right: 0;
+    top: -8px;
+    transform: translate(50%,-100%);
+    transition: 0.3s;
+
+}
+.about .statistics .container .skills div > div > div:hover::before {
+    content: '';
+    border-width: 10px;
+    border-color: RGBA(31, 32, 33, 1) transparent transparent transparent;
+    border-style: solid;
+    position: absolute;
+    right: 0;
+    transform: translate(50%, -50%);
+}
+.about .statistics .container .skills div:nth-of-type(2) > div > div {
+    width: 93%;
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+}
+.about .statistics .container .skills div:nth-of-type(2) > div > div:hover::after {
+    content: '93%';
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    padding-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    background-color: RGBA(31, 32, 33, 1);
+    color: white;
+    position: absolute;
+    right: 0;
+    top: -8px;
+    transform: translate(50%,-100%);
+}
+.about .statistics .container .skills div:nth-of-type(3) > div > div {
+    width: 85%;
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+}
+.about .statistics .container .skills div:nth-of-type(3) > div > div:hover::after {
+    content: '85%';
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    padding-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    background-color: RGBA(31, 32, 33, 1);
+    color: white;
+    position: absolute;
+    right: 0;
+    top: -8px;
+    transform: translate(50%,-100%);
+}
+.about .statistics .container .skills div:last-of-type > div > div {
+    width: 87%;
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+}
+.about .statistics .container .skills div:last-of-type > div > div:hover::after {
+    content: '87%';
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    padding-top: 5px;
+    font-size: 14px;
+    text-align: center;
+    background-color: RGBA(31, 32, 33, 1);
+    color: white;
+    position: absolute;
+    right: 0;
+    top: -8px;
+    transform: translate(50%,-100%);
+}
+
+.about .statistics .text {
+    padding: 50px 0;
+    color: white;
+    position: relative;
+}
+.about .statistics .text h3 {
+    margin-top: 60px;
+    margin-bottom: 100px;
+}
+.about .statistics .text::before {
+    content: 'John Doe';
+    position: absolute;
+    bottom: 20%;
+    right: 50%;
+    transform: translateX(50%);
+    font-size: 14px;
+}
+.pricing .title {
+    padding-bottom: 30px;
+}
+.pricing .container .plans {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+    column-gap: 15px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.pricing .container .plans > div {
+    margin-top: 60px;
+}
+.pricing .container .plans > div .price {
+    padding: 30px 0;
+    position: relative;
+    text-align: center;
+}
+.pricing .container .plans > div .price::before {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.pricing .container .plans > div .price::after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.pricing .container .plans > div .price p {
+    font-size: 30px;
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+.pricing .container .plans > div .price h3 {
+    font-size: 50px;
+    font-weight: 450;
+    position: relative;
+}
+.pricing .container .plans > div .price h3::before {
+    content: '$';
+    font-size: 18px;
+    font-weight: 700;
+    font-style: italic;
+    position: absolute;
+    top: 0;
+    transform: translateX(-15px);
+}
+.pricing .container .plans > div .price h3::after {
+    content: '/MO';
+    font-size: 14px;
+    margin-left: 10px;
+}
+.pricing .container .feat {
+    margin-top: 30px;
+}
+.pricing .container .feat p {
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    font-size: 15px;
+    position: relative;
+}
+.pricing .container .feat p::after {
+    content: '';
+    width: 50%;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50% );
+}
+.pricing .container .feat p:last-of-type:after {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50% );
+}
+.pricing .container .button {
+    border: 1px solid var(--main-color);
+    width: fit-content;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.pricing .container .button:hover {
+    background-color: var(--main-color);
+    color: white;
 }
