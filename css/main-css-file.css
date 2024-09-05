@@ -1105,6 +1105,7 @@ header .container .main-bars{
     border: 1px solid var(--main-color);
     border-radius: 5px;
     transition: 0.3s;
+    cursor: pointer;
 }
 .contact .container .button:hover {
     background-color: var(--main-color);
