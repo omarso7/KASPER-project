@@ -1148,3 +1148,18 @@ footer .icons {
     color: white;
     opacity: 0.8;
 }
+.topbtn {
+    position: fixed;
+    bottom: 50px;
+    color: var(--sec-color);
+    right: 50px;
+    font-size: 25px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 5;
+}
